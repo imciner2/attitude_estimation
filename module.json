@@ -1,0 +1,10 @@
+{
+  "name": "attitude-estimation",
+  "version": "1.0.0",
+  "description": "Attitude estimation libraries",
+  "license": "MIT",
+  "dependencies": {},
+  "targetDependencies": {},
+  "lib": "./source",
+  "extraIncludes": ["inc/"]
+}

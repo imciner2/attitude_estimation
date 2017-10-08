@@ -8,6 +8,7 @@
 // Date			Author			Notes
 // 29/09/2011	SOH Madgwick    Initial release
 // 02/10/2011	SOH Madgwick	Optimised for reduced CPU load
+// 09/10/2017   I   McInerney   Redid quaternion access
 //
 //=====================================================================================================
 
@@ -16,6 +17,7 @@
 
 #include "MahonyAHRS.h"
 #include <math.h>
+#include "attitudeTypes.h"
 
 //---------------------------------------------------------------------------------------------------
 // Definitions
@@ -36,6 +38,13 @@ volatile float integralFBx = 0.0f,  integralFBy = 0.0f, integralFBz = 0.0f;	// i
 // Function declarations
 
 float invSqrt(float x);
+
+void MahonyAHRSgetQuaternions(QUAT_t *quat) {
+	quat->q0 = q0;
+	quat->q1 = q1;
+	quat->q2 = q2;
+	quat->q3 = q3;
+}
 
 //====================================================================================================
 // Functions
