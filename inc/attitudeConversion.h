@@ -3,6 +3,9 @@
 
 #include "attitudeTypes.h"
 
+#if defined (__cplusplus)
+extern "C" {
+#endif
 /*
  * Convert the vector from the body frame to the inertial frame
  *
@@ -28,5 +31,9 @@ void getGravVector(ACCEL_F_t *vec, QUAT_t quat);
  * @param quat The QUAT_t the quaternion orientation si stored in
  */
 void getEulerAngles(ANGLES_t *angles, QUAT_t quat);
+
+#if defined (__cplusplus)
+}
+#endif
 
 #endif

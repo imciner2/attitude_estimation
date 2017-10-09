@@ -24,10 +24,17 @@ extern volatile float twoKi;			// 2 * integral gain (Ki)
 
 //---------------------------------------------------------------------------------------------------
 // Function declarations
+#if defined (__cplusplus)
+extern "C" {
+#endif
 
 void MahonyAHRSgetQuaternions(QUAT_t *quat);
 void MahonyAHRSupdate(float gx, float gy, float gz, float ax, float ay, float az, float mx, float my, float mz);
 void MahonyAHRSupdateIMU(float gx, float gy, float gz, float ax, float ay, float az);
+
+#if defined (__cplusplus)
+}
+#endif
 
 #endif
 //=====================================================================================================
